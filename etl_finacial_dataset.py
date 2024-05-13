@@ -64,6 +64,7 @@ df_sales.to_sql('sales_data',con = conn)
 df_cost.to_sql('cost_data',con = conn)
 df_master.to_sql('master_data',con= conn)
 
+#close connection
 conn.close()
 
 
