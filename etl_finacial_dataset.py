@@ -32,6 +32,7 @@ df['Sales'] = df['Sales'].str.replace('$',"").str.replace(' ','').str.replace(',
 df['Profit'] = df['Profit'].str.replace('$',"").str.replace(' ','').str.replace(',','')
 df['Discounts'].head(10)
 df['Date'] = pd.to_datetime(df['Date']).dt.date
+
 #droping columns that needs to be recalculated
 df = df.drop('Profit',axis =1)
 df = df.drop('Gross Sales',axis =1)
@@ -59,10 +60,10 @@ engine = create_engine('postgresql+psycopg2://postgres:12345@localhost/Financial
 conn = engine.connect()
 
 #load raw data into database
-df_raw.to_sql('raw_data', con = conn)
-df_sales.to_sql('sales_data',con = conn)
-df_cost.to_sql('cost_data',con = conn)
-df_master.to_sql('master_data',con= conn)
+df_raw.to_sql('raw_data', con = conn, if_exists='replace')
+df_sales.to_sql('sales_data',con = conn, if_exists='replace')
+df_cost.to_sql('cost_data',con = conn, if_exists='replace')
+df_master.to_sql('master_data',con= conn, if_exists='replace')
 
 #close connection
 conn.close()
