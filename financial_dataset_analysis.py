@@ -41,11 +41,9 @@ class Bar_plot:
 
 #____________________________________________________________________________________________________________________________________________________________________
 #Establish connection with database
-connection = ps.connect(user = 'postgres', password = 'xxxx', host = 'xxxxxxx', port = '5432', database = 'Financial data')
-con_engine = create_engine('postgresql+psycopg2://postgres:12345@localhost/Financial data')
+con_engine = create_engine('postgresql+psycopg2://postgres:xxxx@localhost/Financial data')
 con = con_engine.raw_connection()
 cursor = con.cursor()
-cursor_2 = connection.cursor()
 
 #Load data from database:
 
