@@ -13,7 +13,7 @@ The project consists of three parts:
 
 ##### Bulit with
 Below is a list of the programs that were used in the project:
-- Python
+- https://www.python.org/
 - SQL 
 - Excel
 The data downloaded for analysis is created from a random dataset downloaded from kaggle.com.
