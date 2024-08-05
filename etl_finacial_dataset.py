@@ -54,7 +54,7 @@ df_master = df
 
 #-----------------------------------------DATA LOADING-------------------------------------------------
 #establish connection with a database to load data
-connection = ps.connect(user = 'postgres', password = '12345', host = '127.0.0.1', port = '5432', database = 'Financial data')
+connection = ps.connect(user = 'postgres', password = 'XXXX', host = '127.0.0.1', port = '5432', database = 'Financial data')
 cur = connection.cursor()
 engine = create_engine('postgresql+psycopg2://postgres:12345@localhost/Financial data')
 conn = engine.connect()
